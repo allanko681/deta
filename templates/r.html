@@ -1,8 +1,59 @@
-<form action="/d" method="post">
-  <label for="url">Ingresa</label>
-  <input type="text" name="url"><br/>
-  <input type="submit" value="Enviar" />
-  
-
-</form>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descargar Video de YouTube</title>
+<style>
+  body {
+    background-color: black;
+    color: #ff0000; /* Rojo */
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  form {
+    margin-top: 50px;
+  }
+  h2 {
+    color: #ff0000; /* Rojo */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+    border: 2px solid #ff0000; /* Rojo */
+    background-color: black;
+    color: #ff0000; /* Rojo */
+    font-size: 18px;
+    text-align: center;
+  }
+  input[type="submit"] {
+    background-color: #ff0000; /* Rojo */
+    color: black;
+    border: none;
+    padding: 15px 30px; /* Tamaño original del botón */
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Ajustar el margen superior del botón */
+  }
+</style>
+</head>
+<body>
+  <h2>Copia tu link de YouTube aquí</h2>
+  <form action="/d" method="post">
+    <label for="url">Ingresa la URL del video:</label>
+    <input type="text" name="url" placeholder="Pegar URL aquí" required>
+    <input type="submit" value="Descargar">
+  </form>
+</body>
+</html>
