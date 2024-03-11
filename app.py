@@ -11,7 +11,7 @@ def route():
 def d():
     url = request.form['url']
     video = YouTube(url)
-    stream = yt.streams.filter(only_audio=True).first()
+    stream = video.streams.filter(only_audio=True).first()
     filename=f"{video.title}.mp3"
     stream.download(filename)
     return send_file(filename, as_attachment=True)
