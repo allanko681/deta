@@ -12,6 +12,7 @@ def d():
     url = request.form['url']
     video = YouTube(url)
     stream = video.streams.filter(only_audio=True).first()
-    return stream.download(filename=f"{video.title}.mp3")
+    stream.download(filename=f"{video.title}.mp3")
+    return send_file(filename, as_attachment=True)
 if __name__ == '__main__':
     app.run
