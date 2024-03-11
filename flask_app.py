@@ -14,4 +14,4 @@ def d():
     stream = video.streams.filter(only_audio=True).first()
     return stream.download(filename=f"{video.title}.mp3")
 if __name__ == '__main__':
-    app.run(host='localhost')
+    app.run
